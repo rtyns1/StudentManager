@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/DOCS/">
+    <File Path=".gitkeep" />
+    <File Path="api-endpoints.md" />
+    <File Path="architecture.md" />
+    <File Path="database-schema.md" />
+    <File Path="glossary.md" />
+    <File Path="learning log.md" />
+    <File Path="ReadMe.md" />
+    <File Path="requirments.md" />
+    <File Path="roadmap.md" />
+    <File Path="versionhistory.md" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="StudentManager.API/StudentManager.API.csproj" />
+  <Project Path="StudentManager.BlazorClient/StudentManager.BlazorClient.csproj" />
+</Solution>
