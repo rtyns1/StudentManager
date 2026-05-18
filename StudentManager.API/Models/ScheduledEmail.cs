@@ -10,6 +10,6 @@
         public string? AttachmentPath { get; set; }
         public DateTime ScheduledAt { get; set; }
         public bool IsSent { get; set; }
-        public DateTime? SentAt { get; set; }
+        public DateTime? SentAt { get; set; } = DateTime.UtcNow;
     }
 }
