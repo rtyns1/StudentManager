@@ -8,6 +8,7 @@ namespace StudentManager.API.Models
         public string? Name { get; set; }
         public string?Email { get; set; }
         public string? Topic { get; set; }
+        public DateTime CreatedAt { get; set; }
 
     }
 }
