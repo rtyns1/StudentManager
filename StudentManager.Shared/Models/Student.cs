@@ -1,6 +1,8 @@
-﻿using Org.BouncyCastle.Bcpg;
+﻿
 
-namespace StudentManager.API.Models
+
+
+namespace StudentManager.Shared.Models
 {
     public class Student
     {

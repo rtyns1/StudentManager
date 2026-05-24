@@ -16,4 +16,5 @@
   </Folder>
   <Project Path="StudentManager.API/StudentManager.API.csproj" />
   <Project Path="StudentManager.BlazorClient/StudentManager.BlazorClient.csproj" />
+  <Project Path="StudentManager.Shared/StudentManager.Shared.csproj" Id="eb6f9dda-bfba-4472-ac44-8d06b787d582" />
 </Solution>

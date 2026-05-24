@@ -1,4 +1,4 @@
-﻿namespace StudentManager.API.Models
+﻿namespace StudentManager.Shared
 {
     public class FileEntry
     {

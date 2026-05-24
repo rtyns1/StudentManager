@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Text;
 using System;
-using StudentManager.API.Models;
+using StudentManager.Shared.Models;
 
 
 namespace StudentManager.API.Data

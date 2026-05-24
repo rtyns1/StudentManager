@@ -1,4 +1,4 @@
-﻿namespace StudentManager.API.Models
+﻿namespace StudentManager.Shared.Models
 {
     public class ScheduledEmail
     {

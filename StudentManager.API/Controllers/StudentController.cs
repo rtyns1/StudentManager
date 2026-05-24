@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc; // imports th namespaces that contain [ApiController], ControllerBase, [HttpGet], Ok().
 using Microsoft.EntityFrameworkCore;
 using StudentManager.API.Data;
+using StudentManager.Shared;
 using System;
 using System.Text;
 using System.Threading;
@@ -52,7 +53,7 @@ namespace StudentManager.API.Controllers
             return Ok(students);
         }
         [HttpPost]
-        public async Task <IActionResult> Create([FromBody] Models.Student student)
+        public async Task <IActionResult> Create([FromBody] Shared.Models.Student student)
         {
             
             if (string.IsNullOrWhiteSpace(student.Name))
@@ -62,9 +63,22 @@ namespace StudentManager.API.Controllers
             student.CreatedAt = DateTime.UtcNow;
             _appDbcontext.Students.Add(student);
             await _appDbcontext.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetAll), new { id = student.Id }, student);
+            //return CreatedAtAction(nameof(GetAll), new { id = student.Id }, student);
+            return Ok(student);
 
         }
+        // for MVP, the only working things i need in a constroller to have a minimum working version are:
+        /*
+         * GET/api/students - list all students, i already have this
+         * POST /api/students - add a new student, i already have this.
+         * 
+         * Then later i can add::
+         * GET /api/student{id} - get a single student for editing
+         * PUT /ai/students/{id{ to update a student
+         * DELETE/api/students/{id} to deleta a student
+         * 
+         * There is still alot, ALOT to be done but we go step by step, as we see that what we build actually works.
+         */
 
     }
 }
