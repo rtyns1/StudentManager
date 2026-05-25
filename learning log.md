@@ -237,3 +237,16 @@ WHAT DONE:: Written the student controller, the subject controller, understood f
 - Write FilesController -- 	POST /api/files/upload (saves file to wwwroot/uploads, stores metadata) – test with Postman or Swagger (file upload in Swagger requires a bit of setup – I’ll show you).
 - Add email scheduling endpoint basic -- EmailsController with POST /api/emails/schedule – stores email in ScheduledEmail table (no Hangfire yet – just save to DB).
 - Test all endpoints, fix bugs, commit.
+
+**NEXT TIME::25TH May 2026, Monday at 11pm**
+-----> So, first start by writing the Lesson model class. It is a data container.
+Lesson model and controller, written, reflects on swagger test.
+LessonLogger written, controller and models written, reflects on Swagger test.
+Works, executes, but says Failed to fetch. FIXABLE.
+-- WHAT TO WORK ON NEXT:::
+----> GET endpoint by studentId for logs-- undesrtand and write it.
+-----> Better documentation.
+-----> How to test with swagger.
+-----> Lesson and LessonLog relationship including foreignkeys and DB connections, as well as some commmon sql server syntax and code.
+-----> Write Filecotnroller, emailcontroller, and make it scehdule and send an email, 
+-----> i was tired, not at 100% energy and efficiency today. tmrw will be better.

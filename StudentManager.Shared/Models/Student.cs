@@ -9,7 +9,7 @@ namespace StudentManager.Shared.Models
         public int Id { get; set; }
         public string? Name { get; set; }
         public string?Email { get; set; }
-        public string? Topic { get; set; }
+        // removed Topic, bcz why would we need Topic in a student data container?
         public DateTime CreatedAt { get; set; }
 
     }

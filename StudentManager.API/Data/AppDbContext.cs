@@ -24,10 +24,13 @@ namespace StudentManager.API.Data
         }
         public DbSet<Student> Students{ get; set; }
         public DbSet<Subject> subjects { get; set; }
+        public DbSet<Lesson> Lessons { get; set; } // this line tells EF core that Lesson model should become a table in the database
+        public DbSet<LessonLog> LessonLogs { get; set; }
         /* this tells EF Core that:
          * Tells EF core that the structure of the Table should matsh your model class.
          * You can now use _context.Students in my code to quesry and save student records.
          */
-        
+
+
     }
 }
