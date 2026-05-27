@@ -285,3 +285,5 @@ Network Failure
 URL scheme must be "http" or "https" for CORS request.
 
 --Need to learn how to fix it.
+
+I also need to learn and underrstnd the patterns to writing the program.cs class, since tha tis the orchestrto of everything.
