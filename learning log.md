@@ -250,3 +250,38 @@ Works, executes, but says Failed to fetch. FIXABLE.
 -----> Lesson and LessonLog relationship including foreignkeys and DB connections, as well as some commmon sql server syntax and code.
 -----> Write Filecotnroller, emailcontroller, and make it scehdule and send an email, 
 -----> i was tired, not at 100% energy and efficiency today. tmrw will be better.
+
+#**BUILDING ROBUST MVP IN ONE SITTING**
+-- What features will be in the MVP?
+1.Add a student.
+2. Add a subject.
+3. Upload a file to a subject, -- Notes, questions, cats, exams
+4. Have classifications for these files so that when i upload afile, i can specifiy what type. Easier navigation.
+5. Schedule a lesson -- pick student, subject, date, time, duration.
+6. Subject selection per student -- lin students to subjects many to many.
+7. View calender with scheduled lessons.
+8. Mark a lesson as scheduled, complete or missed and add a log on what was taught, progress and homework given--LessonLogger.
+9. View student record-- show all lessons, show dates for lessons, plus see all incomplete or unsubmitted work as well as work they submitted but i am yet to mark, or corrctions due.
+10. Schedule an email to a student with an attachment from a subject section,
+11. Automated email sending via Hangfire.
+12. Dashboard-- good UI, simplify everythign in a simple and clear view.
+13. Search and filter functionality, as well as tags for students, subjects, files, lessons etc etc.
+14. Student response mechanism -- students can log in and see their schedule, download files THAT THEY ARE ALOWED TO, see their progress submit homework .
+- communicatinig via chat will be difficult to implement, but they can leave simple comments on ther lesson logs and i can reply to those comments. Here they wil have an opportunity to also say their opinions about hwat they understood.
+--This seems like im hitting wayyy above my current ability, but im giving at least 8 hours to this, its the sole focus for today.
+-- So, now i need a starting point:
+
+### 1.FILE UPLOADS.
+-Save to disk + FileEntry table.--- needed for attaching files to emails.
+-Also will need a FileEntryController, with POST/api/files/upload (saves file to wwwroot/uploads, stores metadata) -
+ test with postman or swagger plus take this time to learn how testing with swaggger works, and again,extreme documentation plus add tags to my git pushes.
+
+ ---> When i test in swagger, it returns an issue::d
+Failed to fetch.
+Possible Reasons:
+
+CORS
+Network Failure
+URL scheme must be "http" or "https" for CORS request.
+
+--Need to learn how to fix it.

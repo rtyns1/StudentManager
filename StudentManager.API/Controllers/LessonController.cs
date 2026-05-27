@@ -7,7 +7,7 @@ using System;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using StudentManager.Shared.Models;
+using StudentManager.Shared.Enums;
 
 namespace StudentManager.API.Controllers
 {
@@ -40,7 +40,7 @@ namespace StudentManager.API.Controllers
                 return BadRequest("Lesson Id is required.");
             if (lesson.StudentId <= 0 || lesson.SubjectId <= 0)
                 return BadRequest("StudentId and SubjectId are required.");
-            lesson.Status = Shared.Models.LessonStatus.Scheduled;
+            lesson.Status = LessonStatusEnum.Scheduled;
             _appDbcontext.Lessons.Add(lesson);
             await _appDbcontext.SaveChangesAsync();
             return Ok(lesson);

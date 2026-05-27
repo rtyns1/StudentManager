@@ -1,4 +1,6 @@
-﻿namespace StudentManager.Shared.Models
+﻿using StudentManager.Shared.Enums;
+
+namespace StudentManager.Shared.Models
 {
     public class Lesson
     {
@@ -17,7 +19,7 @@
         public int SubjectId { get; set; }
         public string? Topic { get; set; }
         public DateTime ScheduledStart { get; set; }
-        public LessonStatus Status { get; set; }
+        public LessonStatusEnum Status { get; set; }
         public TimeSpan Duration { get; set; } // alternative is int DurationMinutes
 
 

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StudentManager.Shared.Models
+namespace StudentManager.Shared.Enums
 {
-    public enum LessonStatus
+    public enum LessonStatusEnum
     {
         Scheduled,
         Completed,
