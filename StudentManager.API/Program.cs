@@ -1,8 +1,11 @@
+using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using StudentManager.API.Data;
+using StudentManager.API.Services;
+
 
 // next we need to create the builder, this is th eobject that will help us configure our application and build the web host.
 var builder = WebApplication.CreateBuilder(args);
@@ -21,14 +24,22 @@ builder.Services.AddControllers(); // this line adds the controllers to the serv
 //we do this in the following 2 lines::
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHangfire(config => config.UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddHangfireServer();
+builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<EmailJob>();
 
 var app = builder.Build();
+
+app.MapControllers();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseHangfireDashboard(); // optional: /hangfire to monitor jobs
+
 app.UseHttpsRedirection();
 using (var scope = app.Services.CreateScope())
 {

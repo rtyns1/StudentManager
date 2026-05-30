@@ -21,10 +21,10 @@ namespace StudentManager.API.Controllers
 
 
 
-    public class StudentControllers : ControllerBase// inherititiln from this class ivees us inbuilt methods like Ok(), BadRequest(), NotFound(), etc etc
+    public class StudentController : ControllerBase// inherititiln from this class ivees us inbuilt methods like Ok(), BadRequest(), NotFound(), etc etc
     {
         private readonly AppDbContext _appDbcontext;
-        public StudentControllers (AppDbContext appDbcontext)
+        public StudentController (AppDbContext appDbcontext)
         {
             //constructor
             _appDbcontext = appDbcontext;
